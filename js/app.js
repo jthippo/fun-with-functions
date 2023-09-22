@@ -52,11 +52,21 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
-  //eslint-disable-line
+  let subTotal = sum(a, b)[0];
+  let total = sum(subTotal, c)[0];
+
+  let subProduct3 = multiply(a, b)[0];
+  let product3 = multiply(subProduct3, c)[0];
+
+  let string3a = a + " and " + b + " and " + c + " sum to " + total + ".";
+  let string3b =
+    "The product of " + a + " and " + b + " and " + c + " is " + product3 + ".";
+
+  return [total, product3, string3a, string3b];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4, 7, 5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
